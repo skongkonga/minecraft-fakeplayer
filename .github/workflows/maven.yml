@@ -25,6 +25,22 @@ jobs:
         java-version: '21.0'
         distribution: 'adopt'
         cache: maven
+    - name: Build 1.20.1 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.20.1 --remapped
+    - name: Build 1.20.2 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.20.2 --remapped
+    - name: Build 1.20.3 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.20.3 --remapped
+    - name: Build 1.20.4 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.20.4 --remapped
+    - name: Build 1.20.5 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.20.5 --remapped
+    - name: Build 1.20.6 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.20.6 --remapped
+    - name: Build 1.21 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.21 --remapped
+    - name: Build 1.21.1 NMS Dependencies
+      run: java -jar lib/BuildTools.jar --rev 1.21.1 --remapped
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Upload build artifact
